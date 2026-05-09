@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Desert Sky Events — Party Rentals Victorville, CA</title>
+  <meta name="description" content="Desert Sky Events offers jumpers, bounce houses, tents, tables, chairs, and event photography rentals in Victorville, Apple Valley, Hesperia and the High Desert area.">
+  <meta name="keywords" content="party rentals Victorville, bounce house rental High Desert, tent rental Apple Valley, party supplies Hesperia, jumper rental Victorville CA, Desert Sky Events">
+  <meta property="og:title" content="Desert Sky Events — Party Rentals High Desert CA">
+  <meta property="og:description" content="Jumpers, tents, tables, chairs, and photography for every occasion in the High Desert.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --orange:#C4622D; --orange-light:#D4854A; --dark:#1e0f05; --dark2:#2a1508;
+      --teal:#3DAFBF; --teal-dark:#1e5c63; --gold:#F0B830;
+      --cream:#FAF3E8; --cream2:#F1E8D8; --text:#2a1508; --text-light:#7a5540;
+    }
+    *{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;}
+    body{font-family:'Nunito',sans-serif;background:var(--cream);color:var(--text);overflow-x:hidden;}
+    img{display:block;}
+
+    /* ── NAV ── */
+    nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(30,15,5,0.97);backdrop-filter:blur(10px);height:68px;padding:0 5%;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(196,98,45,0.3);}
+    .nav-brand{display:flex;align-items:center;gap:10px;text-decoration:none;}
+    .nav-logo{height:42px;width:42px;object-fit:contain;}
+    .nav-logo-placeholder{height:42px;width:42px;background:var(--orange);border-radius:6px;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:#fff;}
+    .nav-brand-text{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;color:var(--orange);line-height:1;}
+    .nav-brand-text span{display:block;font-family:'Nunito',sans-serif;font-size:0.65rem;font-weight:700;color:rgba(250,243,232,0.45);letter-spacing:0.18em;text-transform:uppercase;margin-top:1px;}
+    .nav-links{display:flex;align-items:center;gap:1.8rem;}
+    .nav-links a{color:rgba(250,243,232,0.7);text-decoration:none;font-size:0.82rem;font-weight:600;letter-spacing:0.04em;transition:color 0.2s;}
+    .nav-links a:hover{color:var(--gold);}
+    .nav-right{display:flex;align-items:center;gap:0.75rem;}
+    .nav-phone{color:var(--gold);font-weight:800;font-size:0.88rem;text-decoration:none;letter-spacing:0.02em;}
+    .btn-nav{background:var(--orange);color:#fff;padding:8px 18px;border-radius:20px;font-size:0.78rem;font-weight:700;text-decoration:none;letter-spacing:0.05em;transition:background 0.2s;}
+    .btn-nav:hover{background:var(--orange-light);}
+    .lang-toggle{display:flex;border-radius:14px;overflow:hidden;border:1.5px solid var(--orange);}
+    .ltb{padding:5px 11px;font-size:10.5px;font-weight:700;cursor:pointer;border:none;letter-spacing:0.06em;transition:0.2s;font-family:'Nunito',sans-serif;}
+    .ltb.active{background:var(--orange);color:#fff;}
+    .ltb:not(.active){background:transparent;color:var(--orange);}
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px;}
+    .hamburger span{width:22px;height:2px;background:var(--cream);border-radius:2px;display:block;transition:0.3s;}
+    .mobile-menu{display:none;position:fixed;top:68px;left:0;right:0;background:var(--dark);z-index:999;padding:1.5rem 5%;flex-direction:column;gap:1.2rem;border-bottom:1px solid rgba(196,98,45,0.3);}
+    .mobile-menu.open{display:flex;}
+    .mobile-menu a{color:var(--cream);text-decoration:none;font-size:1rem;font-weight:600;padding:6px 0;border-bottom:1px solid rgba(255,255,255,0.06);}
+    .mob-lang{display:flex;gap:8px;margin-top:8px;}
+
+    /* ── HERO ── */
+    .hero{min-height:100vh;background:var(--dark);display:flex;align-items:center;padding:120px 5% 80px;position:relative;overflow:hidden;}
+    .hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 65% 50%,rgba(196,98,45,0.14) 0%,transparent 60%),radial-gradient(ellipse at 20% 85%,rgba(61,175,191,0.07) 0%,transparent 50%);}
+    .hero-content{position:relative;z-index:2;max-width:580px;}
+    .hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(196,98,45,0.15);border:1px solid rgba(196,98,45,0.4);padding:6px 16px;border-radius:20px;margin-bottom:1.5rem;}
+    .hero-badge span{font-size:0.72rem;font-weight:700;color:var(--orange-light);letter-spacing:0.14em;text-transform:uppercase;}
+    .hero h1{font-family:'Playfair Display',serif;font-size:clamp(2.4rem,5.5vw,4.2rem);font-weight:900;color:#fff;line-height:1.06;margin-bottom:1.25rem;}
+    .hero h1 em{color:var(--orange);font-style:normal;}
+    .hero-sub{font-size:1.05rem;color:rgba(250,243,232,0.65);line-height:1.75;margin-bottom:2rem;max-width:460px;}
+    .hero-btns{display:flex;gap:1rem;flex-wrap:wrap;}
+    .btn-primary{background:var(--orange);color:#fff;padding:14px 28px;border-radius:8px;font-weight:800;font-size:0.92rem;text-decoration:none;letter-spacing:0.04em;transition:transform 0.2s,background 0.2s;display:inline-flex;align-items:center;gap:8px;}
+    .btn-primary:hover{background:var(--orange-light);transform:translateY(-2px);}
+    .btn-ghost{border:2px solid rgba(250,243,232,0.25);color:var(--cream);padding:14px 28px;border-radius:8px;font-weight:700;font-size:0.92rem;text-decoration:none;letter-spacing:0.04em;transition:border-color 0.2s,color 0.2s;}
+    .btn-ghost:hover{border-color:var(--gold);color:var(--gold);}
+    .hero-stats{display:flex;gap:2.5rem;margin-top:3rem;padding-top:2rem;border-top:1px solid rgba(255,255,255,0.1);}
+    .stat-num{font-family:'Playfair Display',serif;font-size:2.2rem;font-weight:700;color:var(--gold);}
+    .stat-lbl{font-size:0.7rem;color:rgba(250,243,232,0.45);font-weight:600;letter-spacing:0.1em;text-transform:uppercase;margin-top:2px;}
+    .hero-photos{position:absolute;right:5%;top:50%;transform:translateY(-50%);width:40%;max-width:480px;display:grid;grid-template-columns:1fr 1fr;gap:8px;border-radius:12px;overflow:hidden;}
+    .hero-photos img{width:100%;height:195px;object-fit:cover;transition:transform 0.4s;}
+    .hero-photos img:hover{transform:scale(1.04);}
+    .hero-photos img:first-child{grid-column:1/-1;height:240px;}
+    .scroll-hint{position:absolute;bottom:28px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:5px;}
+    .scroll-hint span{font-size:0.65rem;color:rgba(250,243,232,0.3);letter-spacing:0.12em;text-transform:uppercase;}
+    .scroll-dot{width:5px;height:5px;background:var(--orange);border-radius:50%;animation:bdrop 1.5s ease-in-out infinite;}
+    @keyframes bdrop{0%,100%{transform:translateY(0);opacity:1;}50%{transform:translateY(8px);opacity:0.3;}}
+
+    /* ── SHARED SECTION ── */
+    section{padding:80px 5%;}
+    .sec-label{font-size:0.72rem;font-weight:800;letter-spacing:0.22em;text-transform:uppercase;color:var(--orange);margin-bottom:0.6rem;}
+    .sec-title{font-family:'Playfair Display',serif;font-size:clamp(1.7rem,3.5vw,2.6rem);font-weight:700;color:var(--dark2);line-height:1.1;margin-bottom:0.9rem;}
+    .sec-desc{font-size:0.95rem;color:var(--text-light);line-height:1.75;max-width:520px;}
+
+    /* ── SERVICES OVERVIEW ── */
+    .services-sec{background:var(--dark);}
+    .services-sec .sec-label{color:var(--teal);}
+    .services-sec .sec-title{color:#fff;}
+    .services-sec .sec-desc{color:rgba(250,243,232,0.55);}
+    .svc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px;margin-top:2.5rem;}
+    .svc-card{background:rgba(255,255,255,0.04);border:1px solid rgba(196,98,45,0.18);border-radius:10px;padding:22px 18px;text-align:center;text-decoration:none;transition:border-color 0.2s,background 0.2s,transform 0.2s;}
+    .svc-card:hover{border-color:var(--orange);background:rgba(196,98,45,0.09);transform:translateY(-4px);}
+    .svc-icon{font-size:2rem;margin-bottom:10px;}
+    .svc-card h3{font-size:0.95rem;font-weight:700;color:#fff;margin-bottom:5px;}
+    .svc-card p{font-size:0.78rem;color:rgba(250,243,232,0.45);line-height:1.5;}
+
+    /* ── PRODUCT SECTIONS ── */
+    .prod-sec{background:var(--cream);}
+    .prod-sec.alt{background:#fff;}
+    .prod-inner{display:grid;grid-template-columns:1fr 1fr;gap:3.5rem;align-items:center;}
+    .prod-inner.rev{direction:rtl;}
+    .prod-inner.rev>*{direction:ltr;}
+    .prod-photos{display:grid;grid-template-columns:1fr 1fr;gap:7px;border-radius:12px;overflow:hidden;}
+    .prod-photos img{width:100%;height:190px;object-fit:cover;transition:transform 0.4s;}
+    .prod-photos img:hover{transform:scale(1.04);}
+    .prod-photos img:first-child{grid-column:1/-1;height:250px;}
+    .photo-placeholder{width:100%;height:190px;background:var(--cream2);border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:0.75rem;color:var(--text-light);font-weight:600;}
+    .photo-placeholder.tall{height:250px;grid-column:1/-1;}
+    .prod-items{display:flex;flex-direction:column;gap:9px;margin:1.4rem 0;}
+    .prod-item{display:flex;justify-content:space-between;align-items:center;padding:11px 15px;background:var(--cream2);border-radius:8px;border-left:3px solid var(--orange);}
+    .prod-item.teal{border-left-color:var(--teal);background:#f2fafb;}
+    .prod-item.gold{border-left-color:var(--gold);background:#fdfaf0;}
+    .pi-name{font-size:0.92rem;font-weight:700;color:var(--dark2);}
+    .pi-desc{font-size:0.78rem;color:var(--text-light);margin-top:2px;}
+    .pi-price{font-family:'Playfair Display',serif;font-size:1.25rem;font-weight:700;color:var(--orange);white-space:nowrap;margin-left:12px;}
+    .prod-item.teal .pi-price{color:var(--teal-dark);}
+    .prod-item.gold .pi-price{color:#b08800;}
+    .price-note{font-size:0.78rem;color:var(--text-light);margin-top:4px;}
+    .tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:1rem;}
+    .tag{background:rgba(196,98,45,0.1);color:var(--orange);font-size:0.73rem;font-weight:700;padding:4px 12px;border-radius:12px;border:1px solid rgba(196,98,45,0.2);}
+
+    /* ── GALLERY ── */
+    .gallery-sec{background:var(--dark2);}
+    .gallery-sec .sec-label{color:var(--gold);}
+    .gallery-sec .sec-title{color:#fff;}
+    .gallery-sec .sec-desc{color:rgba(250,243,232,0.55);}
+    .gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:7px;margin-top:2.5rem;border-radius:12px;overflow:hidden;}
+    .gallery-grid img{width:100%;height:210px;object-fit:cover;transition:transform 0.4s,filter 0.3s;cursor:pointer;filter:brightness(0.88);}
+    .gallery-grid img:hover{transform:scale(1.04);filter:brightness(1.05);}
+    .gallery-grid img:nth-child(1){grid-column:span 2;height:270px;}
+    .gallery-grid img:nth-child(6){grid-column:span 2;height:240px;}
+
+    /* ── ADD-ONS ── */
+    .addons-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:11px;margin-top:2rem;}
+    .addon-card{background:#fff;border-radius:10px;padding:18px 20px;display:flex;justify-content:space-between;align-items:center;border:1px solid var(--cream2);box-shadow:0 2px 8px rgba(42,21,8,0.05);}
+    .a-left{}
+    .a-name{font-size:0.95rem;font-weight:700;color:var(--dark2);}
+    .a-desc{font-size:0.76rem;color:var(--text-light);margin-top:2px;}
+    .a-price{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;color:var(--orange);}
+    .delivery-box{margin-top:1.4rem;background:rgba(240,184,48,0.09);border:1px solid rgba(240,184,48,0.28);border-radius:8px;padding:13px 18px;display:flex;align-items:center;gap:12px;}
+    .delivery-box .di{font-size:1.4rem;}
+    .delivery-box p{font-size:0.88rem;color:var(--dark2);font-weight:600;line-height:1.5;}
+    .delivery-box p span{color:var(--text-light);font-weight:400;}
+
+    /* ── PACKAGES ── */
+    .pkg-sec{background:var(--dark);}
+    .pkg-sec .sec-label{color:var(--gold);}
+    .pkg-sec .sec-title{color:#fff;}
+    .pkg-sec .sec-desc{color:rgba(250,243,232,0.55);}
+    .pkgs-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:2.5rem;}
+    .pkg{border-radius:12px;padding:26px 20px;display:flex;flex-direction:column;}
+    .pkg-a{background:rgba(255,255,255,0.04);border:1.5px solid rgba(196,98,45,0.28);}
+    .pkg-b{background:var(--orange);border:1.5px solid var(--orange);}
+    .pkg-c{background:rgba(255,255,255,0.03);border:1.5px solid rgba(61,175,191,0.28);}
+    .pkg-badge-row{min-height:22px;margin-bottom:6px;}
+    .pkg-badge{display:inline-block;background:var(--gold);color:#6b4200;font-size:0.68rem;font-weight:800;padding:3px 10px;border-radius:10px;text-transform:uppercase;letter-spacing:0.08em;}
+    .del-pill{display:inline-flex;align-items:center;gap:4px;background:rgba(61,175,191,0.18);color:var(--teal);font-size:0.7rem;font-weight:800;padding:3px 10px;border-radius:8px;margin-top:4px;}
+    .pkg-name-lbl{font-size:0.72rem;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;margin-bottom:8px;}
+    .pkg-a .pkg-name-lbl{color:rgba(196,98,45,0.7);}
+    .pkg-b .pkg-name-lbl{color:rgba(255,255,255,0.65);}
+    .pkg-c .pkg-name-lbl{color:var(--teal);}
+    .pkg-price{font-family:'Playfair Display',serif;font-size:2.8rem;font-weight:700;line-height:1;color:#fff;margin-bottom:14px;}
+    .pkg-items{flex:1;display:flex;flex-direction:column;gap:0;}
+    .pkg-row{display:flex;align-items:center;gap:8px;padding:7px 0;font-size:0.84rem;}
+    .pkg-row{border-bottom:1px solid rgba(255,255,255,0.07);}
+    .pkg-a .pkg-row{color:rgba(250,243,232,0.78);}
+    .pkg-b .pkg-row{color:rgba(255,255,255,0.9);}
+    .pkg-c .pkg-row{color:rgba(250,243,232,0.7);}
+    .ck{font-size:0.72rem;font-weight:800;}
+    .pkg-a .ck{color:var(--orange);}
+    .pkg-b .ck{color:rgba(255,255,255,0.75);}
+    .pkg-c .ck{color:var(--teal);}
+    .pkg-save{font-size:0.8rem;font-weight:700;padding:7px 12px;border-radius:6px;text-align:center;margin-top:14px;}
+    .pkg-a .pkg-save{background:rgba(196,98,45,0.14);color:var(--orange-light);}
+    .pkg-b .pkg-save{background:rgba(255,255,255,0.18);color:#fff;}
+    .pkg-c .pkg-save{background:rgba(61,175,191,0.14);color:var(--teal);}
+
+    /* ── PHOTOGRAPHY ── */
+    .photo-sec{background:linear-gradient(135deg,#0f0804 0%,#1b0d04 50%,#0a1a1f 100%);}
+    .photo-sec .sec-label{color:var(--teal);}
+    .photo-sec .sec-title{color:#fff;}
+    .photo-inner{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;margin-top:2.5rem;}
+    .photo-features{display:flex;flex-direction:column;gap:14px;margin:1.8rem 0;}
+    .pfeat{display:flex;gap:12px;align-items:flex-start;}
+    .fdot{width:8px;height:8px;background:var(--teal);border-radius:50%;flex-shrink:0;margin-top:6px;}
+    .ftext{font-size:0.9rem;color:rgba(250,243,232,0.75);line-height:1.55;}
+    .ftext strong{color:#fff;}
+    .btn-teal{display:inline-flex;align-items:center;gap:8px;background:var(--teal);color:#fff;padding:13px 26px;border-radius:8px;font-weight:800;font-size:0.9rem;text-decoration:none;letter-spacing:0.04em;transition:background 0.2s,transform 0.2s;}
+    .btn-teal:hover{background:#2e8f9d;transform:translateY(-2px);}
+    .photo-grid{display:grid;grid-template-columns:1fr 1fr;gap:7px;border-radius:12px;overflow:hidden;}
+    .photo-grid img{width:100%;height:190px;object-fit:cover;}
+    .photo-grid img:first-child{grid-column:span 2;height:240px;}
+
+    /* ── QUOTE FORM ── */
+    .form-sec{background:var(--cream);}
+    .form-inner{display:grid;grid-template-columns:1fr 1.5fr;gap:5rem;align-items:flex-start;margin-top:2.5rem;}
+    .form-info-title{font-family:'Playfair Display',serif;font-size:1.4rem;color:var(--dark2);margin-bottom:0.75rem;}
+    .form-info-desc{font-size:0.88rem;color:var(--text-light);line-height:1.7;margin-bottom:1.5rem;}
+    .contact-list{display:flex;flex-direction:column;gap:12px;}
+    .ci{display:flex;align-items:center;gap:12px;}
+    .ci-icon{width:36px;height:36px;background:var(--orange);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0;}
+    .ci-text{font-size:0.88rem;font-weight:700;color:var(--dark2);}
+    .ci-text a{color:var(--dark2);text-decoration:none;}
+    .ci-text a:hover{color:var(--orange);}
+    .ci-sub{font-size:0.73rem;color:var(--text-light);font-weight:400;display:block;margin-top:1px;}
+    .socials{display:flex;flex-wrap:wrap;gap:8px;margin-top:1.5rem;}
+    .soc{display:flex;align-items:center;gap:6px;padding:7px 13px;border-radius:8px;font-size:0.78rem;font-weight:700;text-decoration:none;transition:transform 0.2s;}
+    .soc:hover{transform:translateY(-2px);}
+    .soc-ig{background:rgba(61,175,191,0.1);color:var(--teal);border:1px solid rgba(61,175,191,0.22);}
+    .soc-tk{background:rgba(196,98,45,0.09);color:var(--orange);border:1px solid rgba(196,98,45,0.18);}
+    .soc-fb{background:rgba(42,21,8,0.07);color:var(--dark2);border:1px solid rgba(42,21,8,0.13);}
+    form{background:#fff;border-radius:14px;padding:32px;box-shadow:0 4px 28px rgba(42,21,8,0.08);}
+    .form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+    .fg{display:flex;flex-direction:column;gap:5px;margin-bottom:14px;}
+    .fg label{font-size:0.73rem;font-weight:800;color:var(--dark2);letter-spacing:0.07em;text-transform:uppercase;}
+    .fg input,.fg select,.fg textarea{padding:11px 13px;border:1.5px solid var(--cream2);border-radius:7px;font-family:'Nunito',sans-serif;font-size:0.875rem;color:var(--dark2);background:var(--cream);transition:border-color 0.2s;outline:none;}
+    .fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--orange);background:#fff;}
+    .fg textarea{min-height:90px;resize:vertical;}
+    .cb-grid{display:grid;grid-template-columns:1fr 1fr;gap:7px;}
+    .cb-item{display:flex;align-items:center;gap:7px;font-size:0.83rem;font-weight:600;color:var(--dark2);cursor:pointer;}
+    .cb-item input[type="checkbox"]{width:15px;height:15px;accent-color:var(--orange);cursor:pointer;}
+    .submit-btn{width:100%;padding:15px;background:var(--orange);color:#fff;border:none;border-radius:8px;font-family:'Nunito',sans-serif;font-size:0.95rem;font-weight:800;letter-spacing:0.05em;cursor:pointer;transition:background 0.2s,transform 0.2s;margin-top:6px;}
+    .submit-btn:hover{background:var(--orange-light);transform:translateY(-2px);}
+    .form-note{font-size:0.72rem;color:var(--text-light);text-align:center;margin-top:8px;}
+    .success-msg{display:none;background:rgba(61,175,191,0.1);border:1px solid rgba(61,175,191,0.3);border-radius:8px;padding:16px;text-align:center;color:var(--teal-dark);font-weight:700;font-size:0.9rem;margin-top:12px;}
+
+    /* ── AREA BANNER ── */
+    .area-sec{background:var(--dark2);padding:60px 5%;}
+    .area-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:2rem;}
+    .area-title{font-family:'Playfair Display',serif;font-size:1.9rem;color:#fff;margin-bottom:0.5rem;}
+    .area-sub{font-size:0.88rem;color:rgba(250,243,232,0.5);}
+    .area-tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:1rem;}
+    .area-tag{background:rgba(240,184,48,0.1);border:1px solid rgba(240,184,48,0.25);color:var(--gold);padding:5px 14px;border-radius:20px;font-size:0.77rem;font-weight:700;}
+    .area-right{text-align:right;}
+    .area-phone-lbl{font-size:0.7rem;color:rgba(250,243,232,0.35);letter-spacing:0.18em;text-transform:uppercase;margin-bottom:5px;}
+    .area-phone{font-family:'Playfair Display',serif;font-size:2.4rem;font-weight:700;color:var(--orange);text-decoration:none;display:block;transition:color 0.2s;}
+    .area-phone:hover{color:var(--orange-light);}
+    .area-email{font-size:0.82rem;color:rgba(250,243,232,0.45);margin-top:4px;}
+
+    /* ── FOOTER ── */
+    footer{background:#0f0804;padding:48px 5% 24px;}
+    .footer-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:3rem;margin-bottom:3rem;}
+    .footer-brand{font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:700;color:var(--orange);margin-bottom:8px;}
+    .footer-desc{font-size:0.8rem;color:rgba(250,243,232,0.38);line-height:1.65;max-width:240px;}
+    .footer-h{font-size:0.7rem;font-weight:800;letter-spacing:0.18em;text-transform:uppercase;color:rgba(250,243,232,0.35);margin-bottom:1rem;}
+    .footer-links{display:flex;flex-direction:column;gap:7px;}
+    .footer-links a{font-size:0.84rem;color:rgba(250,243,232,0.58);text-decoration:none;transition:color 0.2s;}
+    .footer-links a:hover{color:var(--gold);}
+    .footer-bottom{border-top:1px solid rgba(255,255,255,0.06);padding-top:18px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;}
+    .footer-copy,.footer-area-txt{font-size:0.73rem;color:rgba(250,243,232,0.25);}
+
+    /* ── FADE ANIMATION ── */
+    .fade-up{opacity:0;transform:translateY(22px);transition:opacity 0.65s ease,transform 0.65s ease;}
+    .fade-up.visible{opacity:1;transform:translateY(0);}
+
+    /* ── RESPONSIVE ── */
+    @media(max-width:960px){
+      .nav-links{display:none;} .hamburger{display:flex;}
+      .hero-photos{display:none;}
+      .hero h1{font-size:2.3rem;}
+      .prod-inner{grid-template-columns:1fr;gap:2rem;}
+      .prod-inner.rev{direction:ltr;}
+      .pkgs-grid{grid-template-columns:1fr;max-width:380px;margin:2rem auto 0;}
+      .photo-inner{grid-template-columns:1fr;gap:2rem;}
+      .form-inner{grid-template-columns:1fr;gap:2rem;}
+      .form-row{grid-template-columns:1fr;}
+      .gallery-grid{grid-template-columns:1fr 1fr;}
+      .footer-grid{grid-template-columns:1fr;gap:1.8rem;}
+      .area-inner{flex-direction:column;text-align:center;}
+      .area-right{text-align:center;}
+    }
+    @media(max-width:520px){
+      .hero-stats{flex-direction:column;gap:1rem;}
+      .hero-btns{flex-direction:column;}
+      section{padding:60px 4%;}
+    }
+  </style>
+</head>
+<body>
+
+<!-- ══════════════ NAV ══════════════ -->
+<nav id="navbar">
+  <a href="#" class="nav-brand">
+    <!-- Replace src with your logo file path e.g. images/dse-logo.png -->
+    <img src="images/dse-logo.png" alt="Desert Sky Events Logo" class="nav-logo"
+         onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="nav-logo-placeholder" style="display:none">DSE</div>
+    <div class="nav-brand-text">Desert Sky Events<span>Rentals &amp; Party Supplies</span></div>
+  </a>
+  <div class="nav-links">
+    <a href="#services" data-en="Services" data-es="Servicios">Services</a>
+    <a href="#gallery" data-en="Gallery" data-es="Galería">Gallery</a>
+    <a href="#packages" data-en="Packages" data-es="Paquetes">Packages</a>
+    <a href="#photography" data-en="Photography" data-es="Fotografía">Photography</a>
+    <a href="#quote" data-en="Get a Quote" data-es="Cotización">Get a Quote</a>
+  </div>
+  <div class="nav-right">
+    <div class="lang-toggle">
+      <button class="ltb active" onclick="setLang('en',this)">EN</button>
+      <button class="ltb" onclick="setLang('es',this)">ES</button>
+    </div>
+    <a href="tel:7602587380" class="nav-phone">(760) 258-7380</a>
+    <a href="#quote" class="btn-nav" data-en="Book Now" data-es="Reservar">Book Now</a>
+  </div>
+  <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#services" onclick="toggleMenu()" data-en="Services" data-es="Servicios">Services</a>
+  <a href="#gallery" onclick="toggleMenu()" data-en="Gallery" data-es="Galería">Gallery</a>
+  <a href="#packages" onclick="toggleMenu()" data-en="Packages" data-es="Paquetes">Packages</a>
+  <a href="#photography" onclick="toggleMenu()" data-en="Photography" data-es="Fotografía">Photography</a>
+  <a href="#quote" onclick="toggleMenu()" data-en="Get a Quote" data-es="Cotización">Get a Quote</a>
+  <div class="mob-lang">
+    <button class="ltb active" onclick="setLang('en',this)" style="border-radius:10px 0 0 10px;border:1.5px solid var(--orange);">EN</button>
+    <button class="ltb" onclick="setLang('es',this)" style="border-radius:0 10px 10px 0;border:1.5px solid var(--orange);">ES</button>
+  </div>
+</div>
+
+<!-- ══════════════ HERO ══════════════ -->
+<section class="hero" id="home">
+  <div class="hero-content">
+    <div class="hero-badge">
+      <span>⭐</span>
+      <span data-en="High Desert's Premier Party Rental" data-es="La Mejor Renta de Fiestas del High Desert">High Desert's Premier Party Rental</span>
+    </div>
+    <h1>
+      <span data-en="We Set Up." data-es="Nosotros Armamos.">We Set Up.</span><br>
+      <em data-en="You Celebrate." data-es="Tú Celebras.">You Celebrate.</em>
+    </h1>
+    <p class="hero-sub" data-en="Jumpers, tents, tables, chairs, and photography for every occasion in Victorville, Apple Valley, Hesperia and across the High Desert."
+       data-es="Brincacastillos, carpas, mesas, sillas y fotografía para cada ocasión en Victorville, Apple Valley, Hesperia y todo el High Desert.">
+      Jumpers, tents, tables, chairs, and photography for every occasion in Victorville, Apple Valley, Hesperia and across the High Desert.
+    </p>
+    <div class="hero-btns">
+      <a href="#quote" class="btn-primary" data-en="📋 Get a Free Quote" data-es="📋 Cotización Gratis">📋 Get a Free Quote</a>
+      <a href="#services" class="btn-ghost" data-en="See All Services" data-es="Ver Servicios">See All Services</a>
+    </div>
+    <div class="hero-stats">
+      <div><div class="stat-num">5+</div><div class="stat-lbl" data-en="Years Serving" data-es="Años de Servicio">Years Serving</div></div>
+      <div><div class="stat-num">3</div><div class="stat-lbl" data-en="Cities Covered" data-es="Ciudades">Cities Covered</div></div>
+      <div><div class="stat-num">100%</div><div class="stat-lbl" data-en="Local Business" data-es="Negocio Local">Local Business</div></div>
+    </div>
+  </div>
+  <div class="hero-photos">
+    <img src="images/8J2A6797.JPEG" alt="Bounce house rental" onerror="this.style.background='#2a1508';this.removeAttribute('onerror')">
+    <img src="images/IMG_5965.jpg" alt="Tent setup" onerror="this.style.background='#2a1508';this.removeAttribute('onerror')">
+    <img src="images/8J2A6818.JPEG" alt="Combo bouncer" onerror="this.style.background='#1e5c63';this.removeAttribute('onerror')">
+  </div>
+  <div class="scroll-hint">
+    <span data-en="Scroll" data-es="Bajar">Scroll</span>
+    <div class="scroll-dot"></div>
+  </div>
+</section>
+
+<!-- ══════════════ SERVICES OVERVIEW ══════════════ -->
+<section class="services-sec" id="services">
+  <div class="sec-label" data-en="What We Offer" data-es="Lo Que Ofrecemos">What We Offer</div>
+  <div class="sec-title" data-en="Everything for Your Event" data-es="Todo Para Tu Evento">Everything for Your Event</div>
+  <div class="sec-desc" data-en="From bounce houses to full tent setups — we deliver, set up, and pick up so you can focus on celebrating."
+       data-es="Desde brincacastillos hasta carpas completas — nosotros entregamos, armamos y recogemos para que tú disfrutes.">
+    From bounce houses to full tent setups — we deliver, set up, and pick up so you can focus on celebrating.
+  </div>
+  <div class="svc-grid">
+    <a href="#jumpers" class="svc-card">
+      <div class="svc-icon">🏰</div>
+      <h3 data-en="Jumpers" data-es="Brincacastillos">Jumpers</h3>
+      <p data-en="Classic &amp; combo bounce houses" data-es="Brincacastillos clásicos y combos">Classic &amp; combo bounce houses</p>
+    </a>
+    <a href="#tents" class="svc-card">
+      <div class="svc-icon">⛺</div>
+      <h3 data-en="Tents" data-es="Carpas">Tents</h3>
+      <p data-en="20×20 to 20×40 frame tents" data-es="Carpas de 20×20 a 20×40">20×20 to 20×40 frame tents</p>
+    </a>
+    <a href="#tables" class="svc-card">
+      <div class="svc-icon">🪑</div>
+      <h3 data-en="Tables &amp; Chairs" data-es="Mesas y Sillas">Tables &amp; Chairs</h3>
+      <p data-en="Folding tables and white chairs" data-es="Mesas plegables y sillas blancas">Folding tables and white chairs</p>
+    </a>
+    <a href="#addons" class="svc-card">
+      <div class="svc-icon">⚡</div>
+      <h3 data-en="Add-Ons" data-es="Extras">Add-Ons</h3>
+      <p data-en="Generator, linens, chafing dishes" data-es="Generador, manteles, charolas">Generator, linens, chafing dishes</p>
+    </a>
+    <a href="#photography" class="svc-card">
+      <div class="svc-icon">📷</div>
+      <h3 data-en="Photography" data-es="Fotografía">Photography</h3>
+      <p data-en="Professional event coverage" data-es="Cobertura profesional de eventos">Professional event coverage</p>
+    </a>
+    <a href="#packages" class="svc-card">
+      <div class="svc-icon">📦</div>
+      <h3 data-en="Packages" data-es="Paquetes">Packages</h3>
+      <p data-en="Bundle &amp; save on everything" data-es="Agrupa y ahorra en todo">Bundle &amp; save on everything</p>
+    </a>
+  </div>
+</section>
+
+<!-- ══════════════ JUMPERS ══════════════ -->
+<section class="prod-sec" id="jumpers">
+  <div class="prod-inner fade-up">
+    <div class="prod-photos">
+      <img src="images/8J2A6797.JPEG" alt="Classic bounce house" onerror="this.classList.add('photo-placeholder');this.classList.add('tall');this.removeAttribute('src')">
+      <img src="images/Desert_Sky_Events_Jumper_7.jpg" alt="Themed bouncer" onerror="this.classList.add('photo-placeholder');this.removeAttribute('src')">
+      <img src="images/8J2A6818.JPEG" alt="Combo bounce slide" onerror="this.classList.add('photo-placeholder');this.removeAttribute('src')">
+    </div>
+    <div>
+      <div class="sec-label" data-en="Jumpers &amp; Bouncers" data-es="Brincacastillos">Jumpers &amp; Bouncers</div>
+      <div class="sec-title" data-en="Bounce Into the Fun" data-es="A Brincar y Disfrutar">Bounce Into the Fun</div>
+      <div class="sec-desc" data-en="Perfect for birthdays, quinceañeras, block parties, and school events. All units are cleaned and sanitized before every rental."
+           data-es="Perfecto para cumpleaños, quinceañeras, fiestas de vecindad y eventos escolares. Todas las unidades son limpias y desinfectadas antes de cada renta.">
+        Perfect for birthdays, quinceañeras, block parties, and school events. All units are cleaned and sanitized before every rental.
+      </div>
+      <div class="prod-items">
+        <div class="prod-item">
+          <div>
+            <div class="pi-name" data-en="Classic Bounce House" data-es="Brincacastillo Clásico">Classic Bounce House</div>
+            <div class="pi-desc" data-en="13×13 ft · Up to 8 kids" data-es="13×13 ft · Hasta 8 niños">13×13 ft · Up to 8 kids</div>
+          </div>
+          <div class="pi-price">$150</div>
+        </div>
+        <div class="prod-item">
+          <div>
+            <div class="pi-name" data-en="Combo Bounce + Slide" data-es="Combo Brinca + Resbaladilla">Combo Bounce + Slide</div>
+            <div class="pi-desc" data-en="Bounce &amp; slide in one · Castle style" data-es="Brinca y resbala en uno · Estilo castillo">Bounce &amp; slide in one · Castle style</div>
+          </div>
+          <div class="pi-price">$180</div>
+        </div>
+      </div>
+      <div class="price-note" data-en="All prices per day · Delivery pricing varies by location" data-es="Todos los precios son por día · El precio de entrega varía según la ubicación">All prices per day · Delivery pricing varies by location</div>
+      <div class="tags">
+        <span class="tag" data-en="Princess" data-es="Princesa">Princess</span>
+        <span class="tag">Spider-Man</span>
+        <span class="tag">Mickey Mouse</span>
+        <span class="tag" data-en="+ More Themes" data-es="+ Más Temas">+ More Themes</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ TENTS ══════════════ -->
+<section class="prod-sec alt" id="tents">
+  <div class="prod-inner rev fade-up">
+    <div>
+      <div class="sec-label" data-en="Tents &amp; Canopies" data-es="Carpas y Toldos">Tents &amp; Canopies</div>
+      <div class="sec-title" data-en="Shade for Every Size" data-es="Sombra Para Cada Tamaño">Shade for Every Size</div>
+      <div class="sec-desc" data-en="White frame tents with sidewalls — perfect for backyard parties, community events, and corporate gatherings across the High Desert."
+           data-es="Carpas blancas con paredes laterales — perfectas para fiestas en el patio, eventos comunitarios y reuniones corporativas en todo el High Desert.">
+        White frame tents with sidewalls — perfect for backyard parties, community events, and corporate gatherings across the High Desert.
+      </div>
+      <div class="prod-items">
+        <div class="prod-item teal">
+          <div>
+            <div class="pi-name">20×20</div>
+            <div class="pi-desc" data-en="Seats ~40 guests · Sidewalls included" data-es="Aprox. 40 personas · Paredes incluidas">Seats ~40 guests · Sidewalls included</div>
+          </div>
+          <div class="pi-price">$260</div>
+        </div>
+        <div class="prod-item teal">
+          <div>
+            <div class="pi-name">20×30</div>
+            <div class="pi-desc" data-en="Seats ~60 guests" data-es="Aprox. 60 personas">Seats ~60 guests</div>
+          </div>
+          <div class="pi-price">$300</div>
+        </div>
+        <div class="prod-item teal">
+          <div>
+            <div class="pi-name">20×40</div>
+            <div class="pi-desc" data-en="Seats ~80 guests · Best for big events" data-es="Aprox. 80 personas · Ideal para eventos grandes">Seats ~80 guests · Best for big events</div>
+          </div>
+          <div class="pi-price">$350</div>
+        </div>
+      </div>
+      <div class="price-note" data-en="All prices per day · Setup included · Delivery varies by location" data-es="Todos los precios son por día · Armado incluido · Entrega varía según ubicación">All prices per day · Setup included · Delivery varies by location</div>
+    </div>
+    <div class="prod-photos">
+      <img src="images/IMG_5965.jpg" alt="20x20 tent setup" onerror="this.classList.add('photo-placeholder');this.classList.add('tall');this.removeAttribute('src')">
+      <img src="images/IMG_5971.jpg" alt="Tent interior" onerror="this.classList.add('photo-placeholder');this.removeAttribute('src')">
+      <img src="images/IMG_5973.jpg" alt="Tent exterior" onerror="this.classList.add('photo-placeholder');this.removeAttribute('src')">
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ TABLES & CHAIRS ══════════════ -->
+<section class="prod-sec" id="tables">
+  <div class="prod-inner fade-up">
+    <div class="prod-photos">
+      <img src="images/IMG_5981.jpg" alt="Tables and chairs setup" onerror="this.classList.add('photo-placeholder');this.classList.add('tall');this.removeAttribute('src')">
+      <img src="images/IMG_5984.jpg" alt="Folding chairs" onerror="this.classList.add('photo-placeholder');this.removeAttribute('src')">
+      <img src="images/IMG_6000.jpg" alt="Table with cloth" onerror="this.classList.add('photo-placeholder');this.removeAttribute('src')">
+    </div>
+    <div>
+      <div class="sec-label" data-en="Tables &amp; Chairs" data-es="Mesas y Sillas">Tables &amp; Chairs</div>
+      <div class="sec-title" data-en="Seating for Every Guest" data-es="Asientos Para Cada Invitado">Seating for Every Guest</div>
+      <div class="sec-desc" data-en="Clean, sturdy white folding chairs and 6-foot tables. Order as many as you need — we'll bring them right to your door."
+           data-es="Sillas plegables blancas y mesas de 6 pies limpias y resistentes. Pide cuantas necesites — las llevamos directo a tu puerta.">
+        Clean, sturdy white folding chairs and 6-foot tables. Order as many as you need — we'll bring them right to your door.
+      </div>
+      <div class="prod-items">
+        <div class="prod-item gold">
+          <div>
+            <div class="pi-name" data-en="6 ft Folding Table" data-es="Mesa Plegable 6 ft">6 ft Folding Table</div>
+            <div class="pi-desc" data-en="Seats 6 · Add a tablecloth for $5" data-es="Para 6 personas · Agrega un mantel por $5">Seats 6 · Add a tablecloth for $5</div>
+          </div>
+          <div class="pi-price">$10</div>
+        </div>
+        <div class="prod-item gold">
+          <div>
+            <div class="pi-name" data-en="White Folding Chair" data-es="Silla Plegable Blanca">White Folding Chair</div>
+            <div class="pi-desc" data-en="Clean &amp; sturdy · Bulk orders welcome" data-es="Limpia y resistente · Pedidos al mayoreo">Clean &amp; sturdy · Bulk orders welcome</div>
+          </div>
+          <div class="pi-price">$1</div>
+        </div>
+      </div>
+      <div class="price-note" data-en="Per item per day · Text us for large quantity pricing" data-es="Por artículo por día · Escríbenos para precios en grandes cantidades">Per item per day · Text us for large quantity pricing</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ GALLERY ══════════════ -->
+<section class="gallery-sec" id="gallery">
+  <div class="sec-label" data-en="Event Gallery" data-es="Galería de Eventos">Event Gallery</div>
+  <div class="sec-title" data-en="Real Events, Real Memories" data-es="Eventos Reales, Recuerdos Reales">Real Events, Real Memories</div>
+  <div class="sec-desc" data-en="Every photo is from an actual Desert Sky Events rental — this is what your party could look like."
+       data-es="Cada foto es de una renta real de Desert Sky Events — así puede lucir tu fiesta.">
+    Every photo is from an actual Desert Sky Events rental — this is what your party could look like.
+  </div>
+  <div class="gallery-grid">
+    <img src="images/Desert_Sky_Events.jpg" alt="DSE event" onerror="this.style.background='#2a1508';this.removeAttribute('onerror')">
+    <img src="images/8J2A6813.JPEG" alt="Themed bouncer" onerror="this.style.background='#1e5c63';this.removeAttribute('onerror')">
+    <img src="images/8J2A6814.JPEG" alt="Spider-Man jumper" onerror="this.style.background='#2a1508';this.removeAttribute('onerror')">
+    <img src="images/8J2A6815.JPEG" alt="Princess bouncer" onerror="this.style.background='#1e5c63';this.removeAttribute('onerror')">
+    <img src="images/Desert_Sky_Events__1_.jpg" alt="DSE setup" onerror="this.style.background='#1a0e06';this.removeAttribute('onerror')">
+    <img src="images/IMG_5997.jpg" alt="Table setup" onerror="this.style.background='#2a1508';this.removeAttribute('onerror')">
+    <img src="images/IMG_6003.jpg" alt="Chairs rental" onerror="this.style.background='#1e5c63';this.removeAttribute('onerror')">
+    <img src="images/IMG_6009.jpg" alt="Full event setup" onerror="this.style.background='#2a1508';this.removeAttribute('onerror')">
+  </div>
+</section>
+
+<!-- ══════════════ ADD-ONS ══════════════ -->
+<section id="addons">
+  <div class="sec-label" data-en="Add-Ons &amp; Extras" data-es="Extras y Complementos">Add-Ons &amp; Extras</div>
+  <div class="sec-title" data-en="Complete Your Setup" data-es="Completa Tu Evento">Complete Your Setup</div>
+  <div class="sec-desc" data-en="Small details that make a big difference. Add any of these to your order at checkout."
+       data-es="Los pequeños detalles hacen una gran diferencia. Agrega cualquiera de estos a tu orden.">
+    Small details that make a big difference. Add any of these to your order at checkout.
+  </div>
+  <div class="addons-grid fade-up">
+    <div class="addon-card">
+      <div class="a-left">
+        <div class="a-name" data-en="Generator" data-es="Generador">Generator</div>
+        <div class="a-desc" data-en="For areas without power access" data-es="Para lugares sin acceso a electricidad">For areas without power access</div>
+      </div>
+      <div class="a-price">$50</div>
+    </div>
+    <div class="addon-card">
+      <div class="a-left">
+        <div class="a-name" data-en="Table Cloth" data-es="Mantel de Mesa">Table Cloth</div>
+        <div class="a-desc" data-en="White · Fits 6 ft tables" data-es="Blanco · Para mesas de 6 ft">White · Fits 6 ft tables</div>
+      </div>
+      <div class="a-price">$5</div>
+    </div>
+    <div class="addon-card">
+      <div class="a-left">
+        <div class="a-name" data-en="Chafing Dish" data-es="Charola Calentadora">Chafing Dish</div>
+        <div class="a-desc" data-en="Stainless · Keep food warm" data-es="Acero inoxidable · Mantén la comida caliente">Stainless · Keep food warm</div>
+      </div>
+      <div class="a-price">$15</div>
+    </div>
+    <div class="addon-card">
+      <div class="a-left">
+        <div class="a-name" data-en="Event Poster" data-es="Póster de Evento">Event Poster</div>
+        <div class="a-desc" data-en="Custom printed party signage" data-es="Letrero personalizado para tu fiesta">Custom printed party signage</div>
+      </div>
+      <div class="a-price">$10</div>
+    </div>
+  </div>
+  <div class="delivery-box">
+    <div class="di">🚚</div>
+    <p data-en="Delivery available to Victorville, Apple Valley, Hesperia &amp; surrounding areas. <span>Text us your zip code for a delivery quote.</span>"
+       data-es="Entrega disponible en Victorville, Apple Valley, Hesperia y áreas cercanas. <span>Envíanos tu código postal para cotizar la entrega.</span>">
+       Delivery available to Victorville, Apple Valley, Hesperia &amp; surrounding areas. <span>Text us your zip code for a delivery quote.</span>
+    </p>
+  </div>
+</section>
+
+<!-- ══════════════ PACKAGES ══════════════ -->
+<section class="pkg-sec" id="packages">
+  <div class="sec-label" data-en="Bundle &amp; Save" data-es="Agrupa y Ahorra">Bundle &amp; Save</div>
+  <div class="sec-title" data-en="Our Best Value Packages" data-es="Nuestros Paquetes de Mayor Valor">Our Best Value Packages</div>
+  <div class="sec-desc" data-en="Everything you need in one price. Skip the math — we've already bundled the savings for you."
+       data-es="Todo lo que necesitas en un solo precio. Olvídate de calcular — ya incluimos el ahorro por ti.">
+    Everything you need in one price. Skip the math — we've already bundled the savings for you.
+  </div>
+  <div class="pkgs-grid fade-up">
+    <!-- Kids Party -->
+    <div class="pkg pkg-a">
+      <div class="pkg-badge-row"></div>
+      <div class="pkg-name-lbl" data-en="Kids Party" data-es="Fiesta Infantil">Kids Party</div>
+      <div class="pkg-price">$200</div>
+      <div class="pkg-items">
+        <div class="pkg-row"><span class="ck">✓</span><span data-en="Classic Bounce House" data-es="Brincacastillo Clásico">Classic Bounce House</span></div>
+        <div class="pkg-row"><span class="ck">✓</span><span data-en="5 Folding Tables" data-es="5 Mesas Plegables">5 Folding Tables</span></div>
+        <div class="pkg-row"><span class="ck">✓</span><span data-en="25 White Chairs" data-es="25 Sillas Blancas">25 White Chairs</span></div>
+      </div>
+      <div class="pkg-save" data-en="Save $25 vs. individual" data-es="Ahorras $25 vs. individual">Save $25 vs. individual</div>
+    </div>
+    <!-- Fiesta Pack -->
+    <div class="pkg pkg-b">
+      <div class="pkg-badge-row"><div class="pkg-badge" data-en="Most Popular" data-es="Más Popular">Most Popular</div></div>
+      <div class="pkg-name-lbl" data-en="Fiesta Pack" data-es="Paquete Fiesta">Fiesta Pack</div>
+      <div class="pkg-price">$509</div>
+      <div class="pkg-items">
+        <div class="pkg-row"><span class="ck">✓</span><span data-en="Combo Bounce + Slide" data-es="Combo Brinca + Resbaladilla">Combo Bounce + Slide</span></div>
+        <div class="pkg-row"><span class="ck">✓</span><span data-en="20×20 Frame Tent" data-es="Carpa 20×20">20×20 Frame Tent</span></div>
+        <div class="pkg-row"><span class="ck">✓</span><span data-en="8 Tables" data-es="8 Mesas">8 Tables</span></div>
+        <div class="pkg-row"><span class="ck">✓</span><span data-en="40 Chairs" data-es="40 Sillas">40 Chairs</span></div>
+      </div>
+      <div class="pkg-save" data-en="Save $51 vs. individual" data-es="Ahorras $51 vs. individual">Save $51 vs. individual</div>
+    </div>
+    <!-- Full Event -->
+    <div class="pkg pkg-c">
+      <div class="pkg-badge-row"><div class="del-pill" data-en="🚚 Delivery Included" data-es="🚚 Entrega Incluida">🚚 Delivery Included</div></div>
+      <div class="pkg-name-lbl" data-en="Full Event" data-es="Evento Completo">Full Event</div>
+      <div class="pkg-price">$599</div>
+      <div class="pkg-items">
+        <div class="pkg-row"><span class="ck">✓</span><span data-en="Combo Bounce + Slide" data-es="Combo Brinca + Resbaladilla">Combo Bounce + Slide</span></div>
+        <div class="pkg-row"><span class="ck">✓</span><span data-en="20×30 Frame Tent" data-es="Carpa 20×30">20×30 Frame Tent</span></div>
+        <div class="pkg-row"><span class="ck">✓</span><span data-en="10 Tables" data-es="10 Mesas">10 Tables</span></div>
+        <div class="pkg-row"><span class="ck">✓</span><span data-en="60 Chairs" data-es="60 Sillas">60 Chairs</span></div>
+        <div class="pkg-row"><span class="ck">✓</span><span data-en="Free Delivery" data-es="Entrega Gratuita">Free Delivery</span></div>
+      </div>
+      <div class="pkg-save" data-en="Save $41 + free delivery" data-es="Ahorras $41 + entrega gratis">Save $41 + free delivery</div>
+    </div>
+  </div>
+  <p style="text-align:center;margin-top:1.2rem;font-size:0.82rem;color:rgba(250,243,232,0.38);"
+     data-en="Custom packages available — text us your event details for a personalized quote."
+     data-es="Paquetes personalizados disponibles — envíanos los detalles de tu evento para una cotización.">
+     Custom packages available — text us your event details for a personalized quote.
+  </p>
+</section>
+
+<!-- ══════════════ PHOTOGRAPHY ══════════════ -->
+<section class="photo-sec" id="photography">
+  <div class="sec-label" data-en="Event Photography" data-es="Fotografía de Eventos">Event Photography</div>
+  <div class="sec-title" data-en="Capture Every Moment" data-es="Captura Cada Momento">Capture Every Moment</div>
+  <div class="photo-inner fade-up">
+    <div>
+      <p style="font-size:0.95rem;color:rgba(250,243,232,0.65);line-height:1.75;max-width:460px;"
+         data-en="We don't just set up your party — we can document it too. Professional photography coverage tailored to your event's size and vibe."
+         data-es="No solo armamos tu fiesta — también la podemos documentar. Cobertura fotográfica profesional adaptada al tamaño y ambiente de tu evento.">
+        We don't just set up your party — we can document it too. Professional photography coverage tailored to your event's size and vibe.
+      </p>
+      <div class="photo-features">
+        <div class="pfeat">
+          <div class="fdot"></div>
+          <div class="ftext" data-en="<strong>Birthdays &amp; Quinceañeras</strong> — Capture every candle, every dance, every smile." data-es="<strong>Cumpleaños y Quinceañeras</strong> — Capturamos cada vela, cada baile, cada sonrisa."><strong>Birthdays &amp; Quinceañeras</strong> — Capture every candle, every dance, every smile.</div>
+        </div>
+        <div class="pfeat">
+          <div class="fdot"></div>
+          <div class="ftext" data-en="<strong>Family Gatherings</strong> — Group shots, candids, moments that last forever." data-es="<strong>Reuniones Familiares</strong> — Fotos grupales, espontáneas, momentos que duran para siempre."><strong>Family Gatherings</strong> — Group shots, candids, moments that last forever.</div>
+        </div>
+        <div class="pfeat">
+          <div class="fdot"></div>
+          <div class="ftext" data-en="<strong>Custom Pricing</strong> — Rates depend on event size and duration. Text or call for a quote." data-es="<strong>Precios Personalizados</strong> — Las tarifas dependen del tamaño y duración del evento. Llama o escribe para cotizar."><strong>Custom Pricing</strong> — Rates depend on event size and duration. Text or call for a quote.</div>
+        </div>
+      </div>
+      <a href="tel:7602587380" class="btn-teal" data-en="📞 Call or Text for a Quote" data-es="📞 Llama o Escribe para Cotizar">📞 Call or Text for a Quote</a>
+    </div>
+    <div class="photo-grid">
+      <img src="images/Desert_Sky_Events_Jumper_7.jpg" alt="Event photography" onerror="this.style.background='#1e5c63';this.removeAttribute('onerror')">
+      <img src="images/Desert_Sky_Events__1_.jpg" alt="Party moments" onerror="this.style.background='#2a1508';this.removeAttribute('onerror')">
+      <img src="images/IMG_6003.jpg" alt="Event coverage" onerror="this.style.background='#1e5c63';this.removeAttribute('onerror')">
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ QUOTE FORM ══════════════ -->
+<section class="form-sec" id="quote">
+  <div class="sec-label" data-en="Get a Quote" data-es="Solicita una Cotización">Get a Quote</div>
+  <div class="sec-title" data-en="Let's Plan Your Event" data-es="Planeemos Tu Evento">Let's Plan Your Event</div>
+  <div class="form-inner fade-up">
+    <div>
+      <div class="form-info-title" data-en="We'll get back to you fast." data-es="Te respondemos rápido.">We'll get back to you fast.</div>
+      <div class="form-info-desc" data-en="Fill out the form or reach us directly. We typically respond within a few hours — same day on weekdays."
+           data-es="Llena el formulario o contáctanos directamente. Normalmente respondemos en pocas horas — el mismo día entre semana.">
+        Fill out the form or reach us directly. We typically respond within a few hours — same day on weekdays.
+      </div>
+      <div class="contact-list">
+        <div class="ci">
+          <div class="ci-icon">📞</div>
+          <div>
+            <div class="ci-text"><a href="tel:7602587380">(760) 258-7380</a><span data-en="Call or text anytime" data-es="Llama o escribe cuando quieras">Call or text anytime</span></div>
+          </div>
+        </div>
+        <div class="ci">
+          <div class="ci-icon">✉️</div>
+          <div>
+            <div class="ci-text"><a href="mailto:desertskyevents@gmail.com">desertskyevents@gmail.com</a><span data-en="Email for detailed quotes" data-es="Correo para cotizaciones detalladas">Email for detailed quotes</span></div>
+          </div>
+        </div>
+        <div class="ci">
+          <div class="ci-icon">📍</div>
+          <div>
+            <div class="ci-text"><span data-en="Victorville, CA" data-es="Victorville, CA">Victorville, CA</span><span data-en="Serving the entire High Desert" data-es="Sirviendo todo el High Desert">Serving the entire High Desert</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="socials">
+        <a href="https://www.instagram.com/desert_sky._event" class="soc soc-ig" target="_blank">📸 @desert_sky._event</a>
+        <a href="https://www.tiktok.com/@desert_sky_events" class="soc soc-tk" target="_blank">🎵 @desert_sky_events</a>
+        <a href="#" class="soc soc-fb" target="_blank">👍 Desert Sky Event</a>
+      </div>
+    </div>
+    <!-- 
+      FORMSPREE SETUP (free):
+      1. Go to formspree.io and create a free account
+      2. Create a new form and copy your form ID
+      3. Replace "YOUR_FORM_ID" below with your actual ID
+      4. Formspree handles submissions and emails them to you — no backend needed
+    -->
+    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" id="quoteForm">
+      <div class="form-row">
+        <div class="fg">
+          <label data-en="Your Name" data-es="Tu Nombre">Your Name</label>
+          <input type="text" name="name" required placeholder="Maria Garcia">
+        </div>
+        <div class="fg">
+          <label data-en="Phone Number" data-es="Número de Teléfono">Phone Number</label>
+          <input type="tel" name="phone" required placeholder="(760) 000-0000">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="fg">
+          <label data-en="Email Address" data-es="Correo Electrónico">Email Address</label>
+          <input type="email" name="email" placeholder="maria@email.com">
+        </div>
+        <div class="fg">
+          <label data-en="Event Date" data-es="Fecha del Evento">Event Date</label>
+          <input type="date" name="event_date" required>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="fg">
+          <label data-en="Event Type" data-es="Tipo de Evento">Event Type</label>
+          <select name="event_type">
+            <option value="" data-en="Select type..." data-es="Selecciona...">Select type...</option>
+            <option value="birthday" data-en="Birthday Party" data-es="Fiesta de Cumpleaños">Birthday Party</option>
+            <option value="quince" data-en="Quinceañera" data-es="Quinceañera">Quinceañera</option>
+            <option value="graduation" data-en="Graduation" data-es="Graduación">Graduation</option>
+            <option value="community" data-en="Community Event" data-es="Evento Comunitario">Community Event</option>
+            <option value="corporate" data-en="Corporate Event" data-es="Evento Corporativo">Corporate Event</option>
+            <option value="other" data-en="Other" data-es="Otro">Other</option>
+          </select>
+        </div>
+        <div class="fg">
+          <label data-en="# of Guests" data-es="# de Invitados"># of Guests</label>
+          <select name="guests">
+            <option value="under25" data-en="Under 25" data-es="Menos de 25">Under 25</option>
+            <option value="25-50" data-en="25–50" data-es="25–50">25–50</option>
+            <option value="50-100" data-en="50–100" data-es="50–100">50–100</option>
+            <option value="100+" data-en="100+" data-es="100+">100+</option>
+          </select>
+        </div>
+      </div>
+      <div class="fg">
+        <label data-en="ZIP Code (for delivery quote)" data-es="Código Postal (para cotizar entrega)">ZIP Code (for delivery quote)</label>
+        <input type="text" name="zip" placeholder="92392">
+      </div>
+      <div class="fg">
+        <label data-en="What do you need? (Check all that apply)" data-es="¿Qué necesitas? (Selecciona todo lo que aplique)">What do you need?</label>
+        <div class="cb-grid">
+          <label class="cb-item"><input type="checkbox" name="needs" value="bounce_house"><span data-en="Bounce House" data-es="Brincacastillo">Bounce House</span></label>
+          <label class="cb-item"><input type="checkbox" name="needs" value="combo_jumper"><span data-en="Combo Jumper" data-es="Combo Brinca">Combo Jumper</span></label>
+          <label class="cb-item"><input type="checkbox" name="needs" value="tent"><span data-en="Tent" data-es="Carpa">Tent</span></label>
+          <label class="cb-item"><input type="checkbox" name="needs" value="tables"><span data-en="Tables" data-es="Mesas">Tables</span></label>
+          <label class="cb-item"><input type="checkbox" name="needs" value="chairs"><span data-en="Chairs" data-es="Sillas">Chairs</span></label>
+          <label class="cb-item"><input type="checkbox" name="needs" value="photography"><span data-en="Photography" data-es="Fotografía">Photography</span></label>
+          <label class="cb-item"><input type="checkbox" name="needs" value="generator"><span data-en="Generator" data-es="Generador">Generator</span></label>
+          <label class="cb-item"><input type="checkbox" name="needs" value="package"><span data-en="A Package" data-es="Un Paquete">A Package</span></label>
+        </div>
+      </div>
+      <div class="fg">
+        <label data-en="Anything else we should know?" data-es="¿Algo más que debamos saber?">Anything else we should know?</label>
+        <textarea name="message" placeholder="Tell us about your event, location, or any special requests..."></textarea>
+      </div>
+      <button type="submit" class="submit-btn" data-en="🎉 Send My Quote Request" data-es="🎉 Enviar Mi Solicitud">🎉 Send My Quote Request</button>
+      <div class="form-note" data-en="We'll respond within a few hours. No spam, ever." data-es="Respondemos en pocas horas. Sin spam, nunca.">We'll respond within a few hours. No spam, ever.</div>
+      <div class="success-msg" id="successMsg" data-en="✅ Request sent! We'll be in touch soon." data-es="✅ ¡Solicitud enviada! Nos pondremos en contacto pronto.">✅ Request sent! We'll be in touch soon.</div>
+    </form>
+  </div>
+</section>
+
+<!-- ══════════════ SERVICE AREA ══════════════ -->
+<div class="area-sec">
+  <div class="area-inner">
+    <div>
+      <div class="area-title" data-en="Serving the High Desert" data-es="Sirviendo el High Desert">Serving the High Desert</div>
+      <div class="area-sub" data-en="Delivery available across the Inland Empire's High Desert region." data-es="Entrega disponible en toda la región del High Desert del Inland Empire.">Delivery available across the Inland Empire's High Desert region.</div>
+      <div class="area-tags">
+        <span class="area-tag">Victorville</span>
+        <span class="area-tag">Apple Valley</span>
+        <span class="area-tag">Hesperia</span>
+        <span class="area-tag">Adelanto</span>
+        <span class="area-tag" data-en="+ Surrounding Areas" data-es="+ Áreas Cercanas">+ Surrounding Areas</span>
+      </div>
+    </div>
+    <div class="area-right">
+      <div class="area-phone-lbl" data-en="Call or Text Anytime" data-es="Llama o Escribe Cuando Quieras">Call or Text Anytime</div>
+      <a href="tel:7602587380" class="area-phone">(760) 258-7380</a>
+      <div class="area-email">desertskyevents@gmail.com</div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════ FOOTER ══════════════ -->
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div class="footer-brand">Desert Sky Events</div>
+      <div class="footer-desc" data-en="High Desert's premier party rental company. We deliver, set up, and pick up — so your only job is to enjoy the party."
+           data-es="La mejor empresa de renta de fiestas del High Desert. Entregamos, armamos y recogemos — tu único trabajo es disfrutar la fiesta.">
+        High Desert's premier party rental company. We deliver, set up, and pick up — so your only job is to enjoy the party.
+      </div>
+    </div>
+    <div>
+      <div class="footer-h" data-en="Services" data-es="Servicios">Services</div>
+      <div class="footer-links">
+        <a href="#jumpers" data-en="Jumpers &amp; Bouncers" data-es="Brincacastillos">Jumpers &amp; Bouncers</a>
+        <a href="#tents" data-en="Tents &amp; Canopies" data-es="Carpas y Toldos">Tents &amp; Canopies</a>
+        <a href="#tables" data-en="Tables &amp; Chairs" data-es="Mesas y Sillas">Tables &amp; Chairs</a>
+        <a href="#addons" data-en="Add-Ons" data-es="Extras">Add-Ons</a>
+        <a href="#photography" data-en="Photography" data-es="Fotografía">Photography</a>
+        <a href="#packages" data-en="Packages" data-es="Paquetes">Packages</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-h" data-en="Connect" data-es="Conéctate">Connect</div>
+      <div class="footer-links">
+        <a href="tel:7602587380">(760) 258-7380</a>
+        <a href="mailto:desertskyevents@gmail.com">desertskyevents@gmail.com</a>
+        <a href="https://www.instagram.com/desert_sky._event" target="_blank">Instagram</a>
+        <a href="https://www.tiktok.com/@desert_sky_events" target="_blank">TikTok</a>
+        <a href="#" target="_blank">Facebook</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">© 2025 Desert Sky Events · Victorville, CA</div>
+    <div class="footer-area-txt">Victorville · Apple Valley · Hesperia · High Desert, CA</div>
+  </div>
+</footer>
+
+<script>
+// ── LANGUAGE TOGGLE ──
+let currentLang = 'en';
+function setLang(lang, btn) {
+  currentLang = lang;
+  document.querySelectorAll('.ltb').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('.ltb').forEach(b => { if(b.textContent.toLowerCase().includes(lang === 'en' ? 'en' : 'es')) b.classList.add('active'); });
+  btn.classList.add('active');
+  document.querySelectorAll('[data-' + lang + ']').forEach(el => {
+    el.innerHTML = el.getAttribute('data-' + lang);
+  });
+  document.documentElement.lang = lang === 'es' ? 'es' : 'en';
+}
+
+// ── MOBILE MENU ──
+function toggleMenu() {
+  document.getElementById('mobileMenu').classList.toggle('open');
+}
+
+// ── SCROLL ANIMATIONS ──
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if(e.isIntersecting) { e.target.classList.add('visible'); } });
+}, { threshold: 0.12 });
+document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+// ── NAV TRANSPARENCY ──
+window.addEventListener('scroll', () => {
+  const nav = document.getElementById('navbar');
+  if(window.scrollY > 60) {
+    nav.style.background = 'rgba(30,15,5,0.99)';
+  } else {
+    nav.style.background = 'rgba(30,15,5,0.97)';
+  }
+});
+
+// ── FORM SUBMIT (works with Formspree) ──
+document.getElementById('quoteForm').addEventListener('submit', async function(e) {
+  const btn = this.querySelector('.submit-btn');
+  const successMsg = document.getElementById('successMsg');
+  // If using Formspree, let the default POST happen
+  // If you want AJAX submission instead, uncomment below:
+  /*
+  e.preventDefault();
+  btn.textContent = 'Sending...';
+  btn.disabled = true;
+  const data = new FormData(this);
+  const res = await fetch(this.action, { method:'POST', body:data, headers:{'Accept':'application/json'} });
+  if(res.ok) {
+    this.reset();
+    successMsg.style.display = 'block';
+    btn.textContent = currentLang === 'es' ? '🎉 Enviar Mi Solicitud' : '🎉 Send My Quote Request';
+    btn.disabled = false;
+  }
+  */
+});
+</script>
+</body>
+</html>
